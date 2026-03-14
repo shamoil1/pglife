@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Post Property - Amenities &amp; Photos</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .checkbox-custom:checked ~ .checkbox-icon {
+            color: #137fec;
+        }
+        .checkbox-custom:checked ~ .checkbox-label {
+            color: #137fec;
+            font-weight: 600;
+        }
+        .checkbox-card:has(input:checked) {
+            border-color: #137fec;
+            background-color: rgba(19, 127, 236, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d141b] dark:text-slate-100 min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-white dark:bg-background-dark border-b border-slate-200 dark:border-slate-800 px-4 md:px-10 lg:px-40 py-3">
+<div class="max-w-[1200px] mx-auto flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">domain</span>
+</div>
+<h2 class="text-lg font-bold tracking-tight">CampusStay</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Find PG</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">List Property</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Help</a>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 transition-colors">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-cover bg-center border-2 border-primary/20" data-alt="User profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWvdicGi2P5W2eoO5E0Ui8Si2Hdw2Zdvb2oMQw3_oGm4sky5vsxTycLK0wtGKZssU6RsucvBNu1TEgeqTTtvH9TOxgtlRLeciQI-_0s5CaOgpq3rt6650IqA2cTesCHxikc7WXugHm6EC3fJKrwv9wHpGn86KFjm9wDGoBRth2M3fhikvjXfm2hKMAsVNUs1pTPQsbjYoA7T-bT20OR_NZxLMKk54p3m-AFu2WTBgACCvoNpT5U_jSiD52AfOZlEByBEjBMvZf8vto");'></div>
+</div>
+</div>
+</header>
+<main class="max-w-[960px] mx-auto px-4 py-8">
+<!-- Progress Bar Section -->
+<div class="bg-white dark:bg-slate-900 rounded-xl p-6 mb-6 shadow-sm border border-slate-200 dark:border-slate-800">
+<div class="flex flex-col gap-3">
+<div class="flex gap-6 justify-between items-end">
+<div>
+<p class="text-sm text-primary font-semibold uppercase tracking-wider mb-1">Step 3 of 4</p>
+<h1 class="text-2xl font-bold">Amenities &amp; Photos</h1>
+</div>
+<p class="text-sm font-medium">75% Complete</p>
+</div>
+<div class="rounded-full bg-slate-100 dark:bg-slate-800 h-2 w-full overflow-hidden">
+<div class="h-full bg-primary transition-all duration-500" style="width: 75%;"></div>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Landlords with complete details get 2x more student inquiries!</p>
+</div>
+</div>
+<!-- Amenities Section -->
+<div class="bg-white dark:bg-slate-900 rounded-xl p-6 mb-6 shadow-sm border border-slate-200 dark:border-slate-800">
+<h2 class="text-xl font-bold mb-6">What amenities do you provide?</h2>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+<!-- Amenity Card 1 -->
+<label class="checkbox-card relative flex flex-col items-center justify-center p-4 border-2 border-slate-100 dark:border-slate-800 rounded-xl cursor-pointer hover:border-primary/50 transition-all">
+<input checked="" class="checkbox-custom absolute opacity-0" type="checkbox"/>
+<span class="checkbox-icon material-symbols-outlined text-3xl mb-2 text-slate-400">wifi</span>
+<span class="checkbox-label text-sm text-center">High-speed Wi-Fi</span>
+</label>
+<!-- Amenity Card 2 -->
+<label class="checkbox-card relative flex flex-col items-center justify-center p-4 border-2 border-slate-100 dark:border-slate-800 rounded-xl cursor-pointer hover:border-primary/50 transition-all">
+<input class="checkbox-custom absolute opacity-0" type="checkbox"/>
+<span class="checkbox-icon material-symbols-outlined text-3xl mb-2 text-slate-400">ac_unit</span>
+<span class="checkbox-label text-sm text-center">Air Conditioning</span>
+</label>
+<!-- Amenity Card 3 -->
+<label class="checkbox-card relative flex flex-col items-center justify-center p-4 border-2 border-slate-100 dark:border-slate-800 rounded-xl cursor-pointer hover:border-primary/50 transition-all">
+<input checked="" class="checkbox-custom absolute opacity-0" type="checkbox"/>
+<span class="checkbox-icon material-symbols-outlined text-3xl mb-2 text-slate-400">restaurant</span>
+<span class="checkbox-label text-sm text-center">Daily Meals</span>
+</label>
+<!-- Amenity Card 4 -->
+<label class="checkbox-card relative flex flex-col items-center justify-center p-4 border-2 border-slate-100 dark:border-slate-800 rounded-xl cursor-pointer hover:border-primary/50 transition-all">
+<input class="checkbox-custom absolute opacity-0" type="checkbox"/>
+<span class="checkbox-icon material-symbols-outlined text-3xl mb-2 text-slate-400">local_laundry_service</span>
+<span class="checkbox-label text-sm text-center">Laundry Service</span>
+</label>
+<!-- Amenity Card 5 -->
+<label class="checkbox-card relative flex flex-col items-center justify-center p-4 border-2 border-slate-100 dark:border-slate-800 rounded-xl cursor-pointer hover:border-primary/50 transition-all">
+<input class="checkbox-custom absolute opacity-0" type="checkbox"/>
+<span class="checkbox-icon material-symbols-outlined text-3xl mb-2 text-slate-400">fitness_center</span>
+<span class="checkbox-label text-sm text-center">Gym Access</span>
+</label>
+<!-- Amenity Card 6 -->
+<label class="checkbox-card relative flex flex-col items-center justify-center p-4 border-2 border-slate-100 dark:border-slate-800 rounded-xl cursor-pointer hover:border-primary/50 transition-all">
+<input checked="" class="checkbox-custom absolute opacity-0" type="checkbox"/>
+<span class="checkbox-icon material-symbols-outlined text-3xl mb-2 text-slate-400">bolt</span>
+<span class="checkbox-label text-sm text-center">Power Backup</span>
+</label>
+<!-- Amenity Card 7 -->
+<label class="checkbox-card relative flex flex-col items-center justify-center p-4 border-2 border-slate-100 dark:border-slate-800 rounded-xl cursor-pointer hover:border-primary/50 transition-all">
+<input checked="" class="checkbox-custom absolute opacity-0" type="checkbox"/>
+<span class="checkbox-icon material-symbols-outlined text-3xl mb-2 text-slate-400">bathroom</span>
+<span class="checkbox-label text-sm text-center">Attached Bath</span>
+</label>
+<!-- Amenity Card 8 -->
+<label class="checkbox-card relative flex flex-col items-center justify-center p-4 border-2 border-slate-100 dark:border-slate-800 rounded-xl cursor-pointer hover:border-primary/50 transition-all">
+<input class="checkbox-custom absolute opacity-0" type="checkbox"/>
+<span class="checkbox-icon material-symbols-outlined text-3xl mb-2 text-slate-400">cleaning_services</span>
+<span class="checkbox-label text-sm text-center">Maid Service</span>
+</label>
+</div>
+</div>
+<!-- Photos Section -->
+<div class="bg-white dark:bg-slate-900 rounded-xl p-6 mb-8 shadow-sm border border-slate-200 dark:border-slate-800">
+<h2 class="text-xl font-bold mb-2">Upload Photos</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Add at least 3 photos of the room, kitchen, and common areas. High-quality photos increase booking rates by 40%.</p>
+<!-- Dropzone -->
+<div class="border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-xl p-10 flex flex-col items-center justify-center bg-slate-50/50 dark:bg-slate-800/30 hover:border-primary hover:bg-primary/5 transition-all mb-8 group cursor-pointer">
+<div class="size-16 bg-white dark:bg-slate-900 rounded-full flex items-center justify-center shadow-md mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl text-primary">cloud_upload</span>
+</div>
+<h3 class="text-lg font-semibold mb-1">Drag and drop photos here</h3>
+<p class="text-sm text-slate-400 mb-4">Supported formats: JPG, PNG (Max 5MB each)</p>
+<button class="bg-primary text-white px-6 py-2 rounded-lg font-bold text-sm hover:bg-primary/90 transition-colors">
+                    Browse Files
+                </button>
+</div>
+<!-- Previews Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Image 1 (Cover) -->
+<div class="relative aspect-[4/3] rounded-lg overflow-hidden border-2 border-primary group">
+<div class="absolute top-2 left-2 z-10 bg-primary text-white text-[10px] px-2 py-0.5 rounded font-bold uppercase tracking-tight">Cover Photo</div>
+<button class="absolute top-2 right-2 z-10 bg-white/90 text-red-600 size-7 flex items-center justify-center rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+<div class="w-full h-full bg-cover bg-center" data-alt="Modern spacious PG room with bed and desk" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCAscpApLaKJd6yLwDcsnRENAb3QIlb41lBQYA1UMOWN6q1Og7sa0FRHpevMziUa--u7G3xKFAYObi4H_HOBTzBzq0FK9kbig72a_y5RBKAY_EIXUtmU1evCkRGutZL18Hy6zb2Qpb-5ukiR5C45kLVOuyX3M2fdyxH32LQ1wgzxVeN78knd0Nx614-qGQcPblQ3CS8hhpYKkxQxnZMBhktBpQ7J2zU8wlBVe1U5BiN9uyy_GmUYhdcq2RaqmB1-Hp45Rf-VYb5O0_f');"></div>
+</div>
+<!-- Image 2 -->
+<div class="relative aspect-[4/3] rounded-lg overflow-hidden border border-slate-200 dark:border-slate-800 group">
+<button class="absolute top-2 right-2 z-10 bg-white/90 text-red-600 size-7 flex items-center justify-center rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+<div class="w-full h-full bg-cover bg-center" data-alt="Clean minimalist bathroom with white tiles" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAIz4P1IFLJA_pTunTXS2W4R_1TYWd7jVd-GXCwxd5KogAO6-u06bWA4TSRKCXKRkv_ljGcj785hgIOUX-UcxY6z512K7exDfxhDLEFIbzX6EmeV2a7JOD3JPAvHq7fbpuNM-QwQav8YoZJ7FcqF4WiHeJk9TP_LGe2HsfEhrAd-bkU0ZG06fuMqvTNQVt2yup_g-gSnL1hU6TEP_fLVWZavreQX1dQk-LdwCgwb5awdUE8QEwTlUqOBGfi6YYihDzfxuiHlWaRaanD');"></div>
+</div>
+<!-- Image 3 -->
+<div class="relative aspect-[4/3] rounded-lg overflow-hidden border border-slate-200 dark:border-slate-800 group">
+<button class="absolute top-2 right-2 z-10 bg-white/90 text-red-600 size-7 flex items-center justify-center rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+<div class="w-full h-full bg-cover bg-center" data-alt="Shared kitchen area with appliances" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCwB1yTyWzc3PHahcBOaPXnpOlVJ9VdiUoT8-nqUu4guddD5fN7EITEw2jdxHS4aU1Ad7qBBTMJiYbOonNhjLBrUvdWruCTd_PSBJ1ikFueySAwp-4tAYsypN8y5cGrGi7mkaLldxmZdG8rE2lsGQ9ATRb9C9plnPFPaKkU9MQ7WgMP2GyxMRVX_g9cZQZnYrvAmaVO288P-VXWCVA_CdttUukI_TrtD6poN1RaKOooFACIi2o5lFTwlgmOT22AakdqXraBbk8j4-qG');"></div>
+</div>
+<!-- Placeholder / Empty Slot -->
+<div class="aspect-[4/3] rounded-lg border-2 border-dashed border-slate-100 dark:border-slate-800 flex flex-col items-center justify-center bg-slate-50/50 dark:bg-slate-800/20 text-slate-300">
+<span class="material-symbols-outlined text-2xl mb-1">add_a_photo</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Add More</span>
+</div>
+</div>
+</div>
+<!-- Sticky Footer Navigation -->
+<div class="flex items-center justify-between mt-10 pb-20">
+<button class="flex items-center gap-2 px-6 py-3 border border-slate-300 dark:border-slate-700 rounded-lg font-bold text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+                Back
+            </button>
+<div class="flex items-center gap-4">
+<button class="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">Save Draft</button>
+<button onclick="window.location.href='post_property_step_5__pricing_and_rules.html'" class="flex items-center gap-2 px-10 py-3 bg-primary text-white rounded-lg font-bold text-sm hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all active:scale-95">
+                    Next Step
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Floating Help Badge (Student Focus) -->
+<div class="fixed bottom-6 right-6 hidden lg:flex items-center gap-3 bg-white dark:bg-slate-900 p-3 pr-5 rounded-full shadow-2xl border border-primary/20 max-w-xs animate-bounce-slow">
+<div class="size-10 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+<p class="text-xs font-medium leading-tight">Students look for <span class="text-primary font-bold">High-speed Wi-Fi</span> more than any other amenity!</p>
+</div>
+</body></html>

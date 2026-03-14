@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Post Property - Step 2: Location &amp; Map Selection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="bg-white dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl">home_work</span>
+</div>
+<h1 class="text-xl font-bold text-gray-900 dark:text-white tracking-tight">StudentHome</h1>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary" href="#">Find PG</a>
+<a class="text-sm font-medium text-primary border-b-2 border-primary pb-1" href="#">List Property</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary" href="#">Help</a>
+</nav>
+<div class="flex items-center gap-3">
+<button class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold">Profile</button>
+<div class="size-10 rounded-full border border-gray-200 dark:border-gray-700 bg-cover bg-center" data-alt="User profile avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDvYtZ5ZYLsytCSM-0Dpb1K7TMfuXBu9B5Gi9ni3pSBgPkDUXp7IwllkdguEjzx26GuFG4JWcY9NgXG2JDisf0BWLzz2xQeT9bYIeitOok3F6v6AeThhQ6lT0Zjin3mHaVK7YquKa9ACqgzNIYKyCdAeKG-0rQR7-cmBrNyYcMAfRxa8qlgCBehcCj9h816Y6Nz1zB3xtFnQvMB8mIuso1Y9mYuAUos9aS7DbzKEudQ3b5nYes4IIblVJQchSI09yFDaDwnodWy30II')"></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col">
+<!-- Progress Stepper -->
+<div class="max-w-4xl mx-auto w-full px-4 py-6">
+<div class="flex items-center justify-between mb-2">
+<p class="text-gray-900 dark:text-white font-bold text-lg">Post Property</p>
+<p class="text-sm text-gray-500">Step 2 of 4</p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center mb-1">
+<span class="text-xs font-semibold text-primary uppercase tracking-wider">Location Selection</span>
+<span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">40% Complete</span>
+</div>
+<div class="w-full bg-gray-200 dark:bg-gray-800 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full" style="width: 40%"></div>
+</div>
+<p class="text-xs text-gray-500 dark:text-gray-400 mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">info</span>
+                    Help students find your property accurately to get 2x more inquiries.
+                </p>
+</div>
+</div>
+<!-- Main Content Split -->
+<div class="flex-1 flex flex-col lg:flex-row max-w-7xl mx-auto w-full px-4 gap-8 pb-24">
+<!-- Left Side: Form Fields -->
+<div class="flex-1 space-y-6">
+<div class="flex flex-col gap-2">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white">Where is your property located?</h2>
+<p class="text-gray-500 dark:text-gray-400">Provide the address details and mark the exact location on the map.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- City Dropdown -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-gray-700 dark:text-gray-300">City</label>
+<div class="relative">
+<select class="w-full appearance-none rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-3 text-gray-900 dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all">
+<option disabled="" selected="" value="">Select City</option>
+<option value="mumbai">Mumbai</option>
+<option value="pune">Pune</option>
+<option value="bangalore">Bangalore</option>
+<option value="delhi">Delhi</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">expand_more</span>
+</div>
+</div>
+<!-- Locality -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-gray-700 dark:text-gray-300">Locality</label>
+<input class="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-3 text-gray-900 dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="e.g. Powai or Andheri East" type="text"/>
+</div>
+<!-- Building Name / House Number -->
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="text-sm font-semibold text-gray-700 dark:text-gray-300">Building Name / House Number</label>
+<input class="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-3 text-gray-900 dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="Flat No, Wing, Building Name" type="text"/>
+</div>
+<!-- Landmark -->
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="text-sm font-semibold text-gray-700 dark:text-gray-300">Landmark (Optional)</label>
+<input class="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-3 text-gray-900 dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="e.g. Near HDFC Bank" type="text"/>
+</div>
+</div>
+<!-- Map Search Integration -->
+<div class="bg-primary/5 dark:bg-primary/10 p-4 rounded-xl border border-primary/20">
+<label class="text-sm font-bold text-primary mb-2 block">Search Location on Map</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary">search</span>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg border-2 border-primary/20 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:border-primary focus:ring-0 outline-none" placeholder="Search for your building or street" type="text"/>
+</div>
+<p class="text-[10px] text-primary/70 mt-2 font-medium">Finding the exact location on map helps us show nearby universities automatically.</p>
+</div>
+</div>
+<!-- Right Side: Interactive Map -->
+<div class="flex-1 min-h-[400px] lg:min-h-0 flex flex-col">
+<div class="flex-1 relative rounded-xl overflow-hidden border border-gray-300 dark:border-gray-700 shadow-sm bg-gray-100">
+<!-- Map Placeholder -->
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Interactive map showing Mumbai suburbs" data-location="Mumbai, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCVEKo1QS4b7MMmfN0l5WQmtAabsMy9bIxc5186HlZbGviYRkJ3fu3ShR74flu5TLs6jdAgFvtsQIPaS5Zg2nGGQ2h-uGsZqf8Vpl-4_7IDkpqpSax6s78I6UITx5j6mKql3e0yz3RRPOCd4gvj6EpG8dogPBf6FsGevj-ET7XjRhCUAAHJz1UjUCVVobH7AL5UWv9zICH29ChWM0Zq8RHoHJxOH7265kAshuuGWZrs3oGYM1NMDYkK5Akq7r24n3Fp9_Fy4alRz7_M')"></div>
+<!-- Center Pin -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-full flex flex-col items-center pointer-events-none">
+<div class="bg-primary text-white p-2 rounded-full shadow-lg border-2 border-white">
+<span class="material-symbols-outlined text-2xl">location_on</span>
+</div>
+<div class="w-1 h-4 bg-primary rounded-full shadow-sm"></div>
+</div>
+<!-- Map Overlay Instructions -->
+<div class="absolute top-4 left-4 right-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm p-3 rounded-lg shadow-md border border-gray-200 dark:border-gray-800 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">touch_app</span>
+<span class="text-xs font-medium text-gray-700 dark:text-gray-300 leading-tight">Drag the map to position the pin exactly over your building entrance.</span>
+</div>
+<!-- Map Controls -->
+<div class="absolute bottom-4 right-4 flex flex-col gap-2">
+<button class="size-10 bg-white dark:bg-gray-900 rounded-lg shadow-md flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="size-10 bg-white dark:bg-gray-900 rounded-lg shadow-md flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<button class="size-10 bg-white dark:bg-gray-900 rounded-lg shadow-md flex items-center justify-center text-primary transition-colors">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+</div>
+</div>
+<div class="mt-3 flex items-center gap-2 px-2">
+<span class="size-2 rounded-full bg-green-500 animate-pulse"></span>
+<p class="text-[11px] font-medium text-gray-500 uppercase tracking-widest">Live Coordinate Sync: 19.1176° N, 72.9060° E</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Navigation Footer -->
+<footer class="fixed bottom-0 left-0 right-0 bg-white dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 py-4 px-4 z-50">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<button onclick="window.history.back()" class="flex items-center gap-2 px-6 py-3 rounded-lg border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-bold hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+                Back
+            </button>
+<div class="flex items-center gap-4">
+<button class="hidden md:block text-sm font-medium text-gray-500 hover:text-gray-700">Save as Draft</button>
+<button onclick="window.location.href='post_property_step_3__amenities_and_photos.html'" class="flex items-center gap-2 px-8 py-3 rounded-lg bg-primary text-white font-bold hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
+                    Save &amp; Next
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</footer>
+</body></html>

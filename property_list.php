@@ -85,17 +85,17 @@ foreach ($interested_users_properties as $iup) {
     <div class="page-container">
         <div class="filter-bar row justify-content-around">
             <div class="col-auto" data-toggle="modal" data-target="#filter-modal" style="cursor:pointer">
-                <img src="img/filter.png" alt="filter" />
+                <img src="img/filter.svg" alt="filter" />
                 <span>Filter</span>
             </div>
             <div class="col-auto" style="cursor:pointer"
                 onclick="window.location='property_list.php?city=<?= urlencode($city_name) ?>&sort=desc<?= isset($_GET['gender']) ? "&gender=".$_GET['gender'] : "" ?>'">
-                <img src="img/desc.png" alt="sort-desc" />
+                <img src="img/desc.svg" alt="sort-desc" />
                 <span>Highest rent first</span>
             </div>
             <div class="col-auto" style="cursor:pointer"
                 onclick="window.location='property_list.php?city=<?= urlencode($city_name) ?>&sort=asc<?= isset($_GET['gender']) ? "&gender=".$_GET['gender'] : "" ?>'">
-                <img src="img/asc.png" alt="sort-asc" />
+                <img src="img/asc.svg" alt="sort-asc" />
                 <span>Lowest rent first</span>
             </div>
         </div>

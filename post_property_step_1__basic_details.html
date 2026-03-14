@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Post Property - Step 1: Basic Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e7edf3] dark:border-slate-800 bg-white dark:bg-background-dark px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-6">
+<span class="material-symbols-outlined text-3xl">apartment</span>
+</div>
+<h2 class="text-[#0d141b] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">StudentPad</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-[#0d141b] dark:text-slate-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Find PG</a>
+<a class="text-[#0d141b] dark:text-slate-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">List Property</a>
+<a class="text-[#0d141b] dark:text-slate-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Help</a>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-all">
+<span>Profile</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-slate-200 dark:border-slate-700" data-alt="User profile avatar placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC_vbBLeQEabYn-65caPhHimdRDY8UiHSJt9xphuq3fuSCIgm6R-O4PzKrNcGRngwd_Pfg3VRkmIU4zXQD_okayo7pl0oXwYLOur_WYuhUraGQUiR-YtBpyTVNd0v7oe7o8oM-ya_byhz7_b4ok-VMyy14HMl54mZ3XT6UY9gL8KqYVkuNb0iue6K_-FXR4EuDwBaNm9bE1VnhtNniMPYZgQzdNAnkfrqmaTSCchhPzHQwWEoFgDiC-tvi0zyFDbbz-nTXAqYkPeAG5");'></div>
+</div>
+</div>
+</header>
+<main class="flex-1 flex justify-center py-8 px-4 md:px-0">
+<div class="layout-content-container flex flex-col max-w-[800px] w-full bg-white dark:bg-slate-900 shadow-sm rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800">
+<!-- Progress Bar Section -->
+<div class="flex flex-col gap-3 p-6 border-b border-slate-100 dark:border-slate-800">
+<div class="flex gap-6 justify-between items-center">
+<p class="text-[#0d141b] dark:text-white text-base font-bold leading-normal">Step 1 of 5: Basic Details</p>
+<p class="text-primary text-sm font-semibold leading-normal">20% Complete</p>
+</div>
+<div class="rounded-full bg-[#cfdbe7] dark:bg-slate-700 h-2.5 w-full overflow-hidden">
+<div class="h-full rounded-full bg-primary transition-all duration-500" style="width: 20%;"></div>
+</div>
+<div class="flex justify-between mt-1">
+<p class="text-[#4c739a] dark:text-slate-400 text-xs font-normal">Active: Basic Details</p>
+<p class="text-[#4c739a] dark:text-slate-400 text-xs font-normal">Next: Location</p>
+</div>
+</div>
+<!-- Header Text -->
+<div class="px-8 pt-8">
+<h1 class="text-[#0d141b] dark:text-white tracking-tight text-3xl font-bold leading-tight">Post Your Property</h1>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-normal mt-2">Tell us the basics about your space to get started on finding the perfect student tenants.</p>
+</div>
+<!-- Form Body -->
+<div class="p-8 space-y-8">
+<!-- Property Type -->
+<section>
+<h2 class="text-[#0d141b] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] mb-4">What are you listing?</h2>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<label class="relative flex flex-col items-center justify-center p-6 border-2 border-primary bg-primary/5 rounded-xl cursor-pointer hover:bg-primary/10 transition-all">
+<input checked="" class="hidden" name="property_type" type="radio"/>
+<span class="material-symbols-outlined text-primary text-4xl mb-2">home_work</span>
+<span class="font-bold text-primary">PG / Hostel</span>
+</label>
+<label class="relative flex flex-col items-center justify-center p-6 border-2 border-slate-200 dark:border-slate-700 rounded-xl cursor-pointer hover:border-primary/50 transition-all">
+<input class="hidden" name="property_type" type="radio"/>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500 text-4xl mb-2">apartment</span>
+<span class="font-bold text-slate-700 dark:text-slate-300">Flat</span>
+</label>
+<label class="relative flex flex-col items-center justify-center p-6 border-2 border-slate-200 dark:border-slate-700 rounded-xl cursor-pointer hover:border-primary/50 transition-all">
+<input class="hidden" name="property_type" type="radio"/>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500 text-4xl mb-2">house</span>
+<span class="font-bold text-slate-700 dark:text-slate-300">House</span>
+</label>
+</div>
+</section>
+<!-- Gender Preference -->
+<section>
+<h2 class="text-[#0d141b] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] mb-4">Who is this for?</h2>
+<div class="flex flex-wrap gap-3">
+<button class="px-6 py-2 rounded-full border-2 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 font-medium hover:border-primary hover:text-primary transition-all">Male</button>
+<button class="px-6 py-2 rounded-full border-2 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 font-medium hover:border-primary hover:text-primary transition-all">Female</button>
+<button class="px-6 py-2 rounded-full border-2 border-primary bg-primary text-white font-medium">Any Gender</button>
+</div>
+</section>
+<!-- Input Fields -->
+<section class="space-y-6">
+<div>
+<label class="block text-[#0d141b] dark:text-white text-sm font-bold mb-2">Property Title</label>
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 dark:bg-slate-800 dark:text-white focus:ring-primary focus:border-primary p-3" placeholder="e.g. Modern Fully Furnished PG near City University" type="text"/>
+</div>
+<div>
+<label class="block text-[#0d141b] dark:text-white text-sm font-bold mb-2">Short Description</label>
+<textarea class="w-full rounded-lg border-slate-200 dark:border-slate-700 dark:bg-slate-800 dark:text-white focus:ring-primary focus:border-primary p-3" placeholder="Briefly describe the highlights of your property, common areas, and house rules..." rows="4"></textarea>
+<div class="flex justify-between mt-1">
+<p class="text-xs text-slate-400">Write at least 50 characters</p>
+<p class="text-xs text-slate-400">0 / 500</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer Navigation -->
+<div class="p-6 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center">
+<button class="px-6 py-2.5 text-slate-500 dark:text-slate-400 font-bold text-sm hover:text-primary transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">close</span>
+                    Cancel
+                </button>
+<button onclick="window.location.href='post_property_step_2__location_&_map_selection.html'" class="min-w-[140px] px-8 py-3 bg-primary text-white rounded-lg font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2">
+                    Next
+                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+<footer class="py-6 text-center text-slate-400 text-xs">
+        © 2024 StudentPad Property Listing Manager. All rights reserved.
+    </footer>
+</body></html>
