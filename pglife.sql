@@ -282,3 +282,16 @@ GROUP BY p.id, p.name;
 -- Total Views: 2
 -- Ready for use with PG Life application
 -- =============================================
+
+
+CREATE TABLE \ookings\ (
+    \id\ int(11) NOT NULL AUTO_INCREMENT,
+    \user_id\ int(11) NOT NULL,
+    \property_id\ int(11) NOT NULL,
+    \	otal_rent\ float NOT NULL,
+    \ooking_date\ timestamp DEFAULT CURRENT_TIMESTAMP,
+    \status\ varchar(50) DEFAULT 'Confirmed',
+    PRIMARY KEY (\id\),
+    FOREIGN KEY (\user_id\) REFERENCES \users\(\id\),
+    FOREIGN KEY (\property_id\) REFERENCES \properties\(\id\)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

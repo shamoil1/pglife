@@ -378,9 +378,33 @@ $total_due    = $monthly_rent + $security_dep + $platform_fee;
             const btn = document.getElementById('pay-btn');
             btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Processing…';
             btn.disabled = true;
-            setTimeout(() => {
-                document.getElementById('successOverlay').classList.add('show');
-            }, 2000);
+
+            // Make API request to save booking
+            fetch('api/book_property.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `property_id=<?= $property_id ?>&total_rent=<?= $total_due ?>`,
+            })
+            .then(response => response.json())
+            .then(data => {
+                if(data.status === 'success') {
+                    // Update user flow status
+                    setTimeout(() => {
+                        document.getElementById('successOverlay').classList.add('show');
+                    }, 500);
+                } else {
+                    alert(data.message || 'Failed to complete booking. Please try again.');
+                    btn.innerHTML = 'Pay & Confirm Booking';
+                    btn.disabled = false;
+                }
+            })
+            .catch(error => {
+                alert('Error processing payment. Please check your connection.');
+                btn.innerHTML = 'Pay & Confirm Booking';
+                btn.disabled = false;
+            });
         }
     </script>
 </body>
