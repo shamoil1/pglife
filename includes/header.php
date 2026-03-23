@@ -28,8 +28,11 @@
                             Hi, <?= htmlspecialchars($_SESSION["full_name"]) ?>
                         </span>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="dashboard.php">
+                    <li class="nav-item">                        <a class="nav-link text-primary font-weight-bold mr-2" href="add_property.php">
+                            <i class="fas fa-plus-circle"></i> Add Property
+                        </a>
+                    </li>
+                    <li class="nav-item">                        <a class="nav-link" href="dashboard.php">
                             <i class="fas fa-user"></i>Dashboard
                         </a>
                     </li>
